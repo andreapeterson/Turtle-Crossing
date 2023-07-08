@@ -21,6 +21,7 @@ screen.onkeypress(key="Right", fun=turtle.jump_right)
 screen.onkeypress(key="Left", fun=turtle.jump_left)
 score = Scoreboard()
 blocks = Blocks()
+timer = 0.1
 
 
 # The Game
@@ -44,6 +45,7 @@ while game_on:
         turtle.restart()
         score.add_point()
         blocks.level_up()
+        timer -= 0.01
 
     # If turtle hits block:
     for block in blocks.all_blocks:
