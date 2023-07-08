@@ -19,7 +19,6 @@ class Blocks:
         if random_chance == 1:
             if self.block_reserve:
                 new_block = self.block_reserve.pop()
-                new_block.color("black")
             else:
                 new_block = Turtle("square")
                 new_block.penup()
